@@ -13,28 +13,13 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public  class testcase04 {
-    private WebDriver driver;
-    private String baseUrl;
-
-    private final StringBuffer verificationErrors = new StringBuffer();
-
-
-    @BeforeTest
-    public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C:\\Users\\ahmed\\IdeaProjects\\Guru99_Tasks\\src\\main\\resources\\geckodriver.exe"); // Ensure the path to geckodriver is correct
-        driver = new FirefoxDriver();
-        baseUrl = "http://live.techpanda.org/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
+public  class testcase04 extends BaseClass{
 
     @Test
     public void testDay4TestCase4() throws Exception {
-        // 1- open home page
-        driver.get(baseUrl);
 
     // Step 2 . Click on "MOBILE" menu
-        driver.findElement(By.linkText("MOBILE")).click();
+        driver.findElement(By.linkText("Mobile")).click();
 
 
     // Step 3 .  select first and second mobiles to compare by "Add to Compare" button
@@ -77,11 +62,7 @@ public  class testcase04 {
 
 
     }
-    @AfterTest
-    public void tearDown() throws Exception {
-        Thread.sleep(2000);
-        driver.quit();
-    }
+
         }
 
 

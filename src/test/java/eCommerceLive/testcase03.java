@@ -11,25 +11,11 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class testcase03 {
-    private WebDriver driver;
-    private String baseUrl;
-
-    private final StringBuffer verificationErrors = new StringBuffer();
-
-
-    @BeforeTest
-    public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C:\\Users\\ahmed\\IdeaProjects\\Guru99_Tasks\\src\\main\\resources\\geckodriver.exe"); // Ensure the path to geckodriver is correct
-        driver = new FirefoxDriver();
-        baseUrl = "http://live.techpanda.org/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
+public class testcase03 extends BaseClass{
 
     @Test
     public void testDay3TestCase3() throws Exception {
-        // 1- open home page
-        driver.get(baseUrl);
+
 
     // Step 2 . Click on "MOBILE" menu
         driver.findElement(By.linkText("MOBILE")).click();
@@ -65,11 +51,6 @@ public class testcase03 {
         Assert.assertEquals(empty_mssg, "SHOPPING CART IS EMPTY");
     }
 
-    @AfterTest
-    public void tearDown() throws Exception {
-        driver.quit();
-
-        }
-    }
+     }
 
 

@@ -5,7 +5,7 @@
 
     <test name="Regression1">
         <classes>
-            <class name="OpenBrowserSoftAssert">
+            <class name="">
             <methods>
                 <include name="validData"/>            // to include all methods that you want to execute
                 <exclude name="invalidData"/>

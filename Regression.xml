@@ -5,8 +5,16 @@
 
     <test name="Regression1">  // to run specific classes when make regerssion testing
         <classes>
-            <class name="OpenBrowserSoftAssert"/>
-
+<class name="eCommerceLive.testcase01"></class>
+<class name="eCommerceLive.testcase02"></class>
+<class name="eCommerceLive.testcase03"></class>
+<class name="eCommerceLive.testcase04"></class>
+<class name="eCommerceLive.testcase05"></class>
+<class name="eCommerceLive.testcase06"></class>
+<class name="eCommerceLive.testcase07"></class>
+<class name="eCommerceLive.testcase08"></class>
+<class name="eCommerceLive.testcase09"></class>
+<class name="eCommerceLive.testcase10"></class>
         </classes>
     </test>
 </suite>

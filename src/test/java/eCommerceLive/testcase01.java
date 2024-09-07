@@ -16,21 +16,10 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class testcase01 {
-    private WebDriver driver;
-    private String baseUrl;
+public class testcase01 extends BaseClass {
     public int scc = 0;
 
     private final StringBuffer verificationErrors = new StringBuffer();
-
-    @BeforeMethod
-    @BeforeTest
-    public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C:\\Users\\ahmed\\IdeaProjects\\Guru99_Tasks\\src\\main\\resources\\geckodriver.exe"); // Ensure the path to geckodriver is correct
-        driver = new FirefoxDriver();
-        baseUrl = "http://live.techpanda.org/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
 
     @Test
     public void testDay1TestCase1() throws Exception {
@@ -67,12 +56,5 @@ public class testcase01 {
       //  FileUtils.copyFile(scrFile, new File(png));
     }
 
-    @AfterTest
-    public void tearDown() throws Exception {
-        driver.quit();
-        if (!"".equals(verificationErrors.toString())) {
-            throw new Exception(verificationErrors.toString());
-        }
-    }
-}
+ }
 

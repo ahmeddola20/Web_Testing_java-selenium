@@ -11,22 +11,9 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class testcase02 {
-    private WebDriver driver;
-    private String baseUrl;
+public class testcase02 extends BaseClass {
     String product_list_value ;
     String product_details_value ;
-
-    private final StringBuffer verificationErrors = new StringBuffer();
-
-    @BeforeMethod
-    @BeforeTest
-    public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C:\\Users\\ahmed\\IdeaProjects\\Guru99_Tasks\\src\\main\\resources\\geckodriver.exe"); // Ensure the path to geckodriver is correct
-        driver = new FirefoxDriver();
-        baseUrl = "http://live.techpanda.org/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
 
     @Test
     public void testDay2TestCase2() throws Exception {
@@ -48,11 +35,6 @@ public class testcase02 {
             Assert.assertEquals(product_details_value, product_list_value);
     }
 
-    @AfterTest
-    public void tearDown() throws Exception {
-        driver.quit();
-
-        }
     }
 
 
